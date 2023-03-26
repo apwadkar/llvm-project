@@ -2719,6 +2719,22 @@ the configuration (without a prefix: ``Auto``).
      f(MyMap[{composite, key}]);            f(MyMap[{ composite, key }]);
      new int[3]{1, 2, 3};                   new int[3]{ 1, 2, 3 };
 
+.. _DecorateReflowedComments:
+
+**DecorateReflowedComments** (``Boolean``) :versionbadge:`clang-format 17` :ref:`¶ <DecorateReflowedComments>`
+  If ``true``, when a block comment is reflowed, add a ``* `` to the
+  beginning of the continuation line.
+
+  .. code-block:: c++
+
+      false:
+      /* blah blah blah blah blah blah blah blah blah blah blah blah blah
+         blah blah blah blah blah blah blah blah */
+
+      true:
+      /* blah blah blah blah blah blah blah blah blah blah blah blah blah
+       * blah blah blah blah blah blah blah blah */
+
 .. _DeriveLineEnding:
 
 **DeriveLineEnding** (``Boolean``) :versionbadge:`clang-format 10` :ref:`¶ <DeriveLineEnding>`

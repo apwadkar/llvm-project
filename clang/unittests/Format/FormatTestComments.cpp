@@ -1593,6 +1593,11 @@ TEST_F(FormatTestComments, ReflowsComments) {
             " * long */",
             format("/* long long long long */", getLLVMStyleWithColumns(20)));
 
+  FormatStyle Style = getLLVMStyleWithColumns(20);
+  EXPECT_EQ("/* long long long\n"
+            " * long */",
+            format("/* long long long long */", Style));
+
   // Break single line block comment that are not first in the line with '  '
   // decoration.
   EXPECT_EQ("int i; /* long long\n"

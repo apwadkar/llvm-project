@@ -2040,6 +2040,20 @@ struct FormatStyle {
   /// \version 3.4
   bool Cpp11BracedListStyle;
 
+  /// If ``true``, when a block comment is reflowed, add a ``* `` to the
+  /// beginning of the continuation line.
+  /// \code
+  ///     false:
+  ///     /* blah blah blah blah blah blah blah blah blah blah blah blah blah
+  ///        blah blah blah blah blah blah blah blah */
+  ///
+  ///     true:
+  ///     /* blah blah blah blah blah blah blah blah blah blah blah blah blah
+  ///      * blah blah blah blah blah blah blah blah */
+  /// \endcode
+  /// \version 17
+  bool DecorateReflowedComments;
+
   /// This option is **deprecated**. See ``DeriveLF`` and ``DeriveCRLF`` of
   /// ``LineEnding``.
   /// \version 10
